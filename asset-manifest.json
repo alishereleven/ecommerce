@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/ecommerce/static/js/main.4c68a395.js",
+    "main.js": "/ecommerce/static/js/main.85ce8946.js",
     "index.html": "/ecommerce/index.html",
-    "main.4c68a395.js.map": "/ecommerce/static/js/main.4c68a395.js.map"
+    "main.85ce8946.js.map": "/ecommerce/static/js/main.85ce8946.js.map"
   },
   "entrypoints": [
-    "static/js/main.4c68a395.js"
+    "static/js/main.85ce8946.js"
   ]
 }
