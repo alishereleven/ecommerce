@@ -1,24 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import { mobile } from '../responsive'
+
 import { Facebook, Instagram, Twitter, Pinterest, Room, Phone, MailOutline } from '@material-ui/icons'
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `
 
 const Left = styled.div`
   flex: 1;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
-  padding: 20px;
 `
 
-const Logo = styled.h1`
-
-`
+const Logo = styled.h1``
 
 const Description = styled.p`
-  margin: 20px 0px;
+  margin: 1.25rem 0;
 `
 
 const SocialContainer = styled.div`
@@ -26,51 +28,54 @@ const SocialContainer = styled.div`
 `
 
 const SocialIcon = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
+  margin-right: 1.25rem;
   background-color: ${props => props.color};
   display: flex;
   align-items: center;
   justify-items: center;
-  margin-right: 20px;
   color: white;
 `
 
 const Center = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 1.25rem;
+  ${mobile({ display: "none" })}
 `
 
 const Title = styled.h3`
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 `
 
 const List = styled.ul`
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 `
 
 const ListItem = styled.li`
   width: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 0.7rem;
 `
 
 const Right = styled.div`
   flex: 1;
-  padding: 20px;
+  padding: 1.25rem;
+  ${mobile({ backgroundColor: "#eee" })}
 `
 
 const ContactItem = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
 `
 
 const ContactType = styled.a`
+  margin: 0 0.7rem;
   text-decoration: none;
   color: black;
 `
@@ -80,6 +85,9 @@ const Payment = styled.img`
 `
 
 const Footer = () => {
+  const phone = '010-6511-3566'
+  const email = 'alisherashim11@gmail.com'
+
   return (
     <Container>
       <Left>
@@ -88,16 +96,16 @@ const Footer = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus recusandae suscipit, perspiciatis laboriosam rem, dolor dolorum corporis repudiandae dolores non nostrum iusto error aperiam at ad. Error, doloremque veritatis!
         </Description>
         <SocialContainer>
-          <SocialIcon color="3B5999">
+          <SocialIcon color="#3B5999">
             <Facebook />
           </SocialIcon>
-          <SocialIcon color="E4405F">
+          <SocialIcon color="#E4405F">
             <Instagram />
           </SocialIcon>
-          <SocialIcon color="55ACEE">
+          <SocialIcon color="#55ACEE">
             <Twitter />
           </SocialIcon>
-          <SocialIcon color="E60023">
+          <SocialIcon color="#E60023">
             <Pinterest />
           </SocialIcon>
         </SocialContainer>
@@ -105,7 +113,7 @@ const Footer = () => {
       <Center>
         <Title>Useful Links</Title>
         <List>
-        <ListItem>Home</ListItem>
+          <ListItem>Home</ListItem>
           <ListItem>Cart</ListItem>
           <ListItem>Man Fashion</ListItem>
           <ListItem>Woman Fashion</ListItem>
@@ -120,15 +128,16 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px"}}/> Adress
+          <Room />
+          <ContactType>Adress</ContactType>
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px"}}/>
-          <ContactType href={`tel:010-6511-3566`}>010-6511-3566</ContactType>
+          <Phone />
+          <ContactType href={`tel:${phone}`}>{phone}</ContactType>
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} />
-          <ContactType href={`mailto:alisherashim11@gmail.com`}>alisherashim11@gmail.com</ContactType>
+          <MailOutline />
+          <ContactType href={`mailto:${email}`}>{email}</ContactType>
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

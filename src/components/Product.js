@@ -1,6 +1,7 @@
-import { ShoppingCartOutlined, SearchOutlined, FavoriteBorderOutlined } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
+
+import { ShoppingCartOutlined, SearchOutlined, FavoriteBorderOutlined } from '@material-ui/icons'
 
 const Info = styled.div`
   opacity: 0;
@@ -20,14 +21,14 @@ const Info = styled.div`
 
 const Container = styled.div`
   flex: 1;
-  margin: 5px;
-  min-width: 280px;
-  height: 350px;
+  min-width: 17.5rem;
+  height: 22rem;
+  margin: 0.3rem;
+  background-color: #f5fbfd;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfd;
-  position: relative;
   
   &:hover ${Info}{
     opacity: 1;
@@ -35,8 +36,8 @@ const Container = styled.div`
 `
 
 const Circle = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   border-radius: 50%;
   background-color: white;
   position: absolute;
@@ -48,14 +49,14 @@ const Image = styled.img`
 `
 
 const Icon = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
+  margin: 0.7rem;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px;
   transition: all 0.5s ease;
 
   &:hover{

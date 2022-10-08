@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import Category from './Category'
 import { categories } from "../data"
+import { mobile } from "../responsive"
 
 const Container = styled.div`
+  padding: 1.25rem;
   display: flex;
-  padding: 20px;
-  justify-content: space-between;
+  ${mobile({ padding: 0, flexDirection: "column" })}
 `
 
 const Categories = () => {

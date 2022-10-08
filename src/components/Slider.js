@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons'
 
 import { sliderItems } from '../data'
+import { mobile } from '../responsive'
+
+import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons'
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  display: flex;
   position: relative;
+  display: flex;
   overflow: hidden;
+  ${mobile({ display: "none" })}
 `
 
 const Arrow = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  background-color: #fff7f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 0;
   bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: ${props => props.direction === 'left' && '10px'};
   right: ${props => props.direction === 'right' && '10px'};
-  margin: auto;
   cursor: pointer;
-  opacity: 0.5;
   z-index: 100;
 `
 
@@ -40,11 +42,11 @@ const Slide = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #${props => props.bg};
-  display: flex;
-  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   transition: all 1s ease;
   transform: translateX(${props => {
     if (props.position === "activeSlide") {
@@ -69,18 +71,20 @@ const Image = styled.img`
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 50px;
+  padding: 3rem;
 `
 
 const Title = styled.h1`
-  font-size: 70px;
+  font-size: 4.4rem;
 `
+
 const Description = styled.p`
-  margin: 50px 0;
-  font-size: 20px;
+  margin: 3rem 0;
+  font-size: 1.25rem;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 0.2rem;
 `
+
 const Button = styled.button`
   padding: 10px;
   font-size: 20px;
