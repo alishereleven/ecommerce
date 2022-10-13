@@ -50,7 +50,7 @@ const Category = ({ item }) => {
 
   return (
     <Container>
-      <Link to={`/products/${cat}`}>
+      <Link to={`/ecommerce/products/${cat}`}>
         <Image src={img} />
         <Info>
           <Title>{title}</Title>
